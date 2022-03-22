@@ -1,0 +1,31 @@
+.notification-container {
+	font-size: 14px;
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 9999;
+}
+
+.bottom-right {
+	bottom: 20px;
+	right: 20px;
+	transition: transform 0.5s ease-in-out;
+	animation: toast-in-right .7s;
+}
+
+@keyframes toast-in-right {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes toast-in-left {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
