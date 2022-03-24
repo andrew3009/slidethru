@@ -11,6 +11,32 @@
 	animation: toast-in-left .7s;
 }
 
+.toast {
+	height: 50px;
+	width: 365px;
+	color: #fff;
+	padding: 10px 15px;
+	margin: 10px 0;
+}
+
+.icon-container {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.icon {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+}
+
+.text-container {
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
 .notification-message {
 	margin: 0;
 	text-align: left;
@@ -24,14 +50,6 @@
 .notification-image {
 	float: left;
 	margin-right: 10px;
-}
-
-.toast {
-	height: 50px;
-	width: 365px;
-	color: #fff;
-	padding: 20px 15px 10px 10px;
-	margin: 10px 0;
 }
 
 .error {
