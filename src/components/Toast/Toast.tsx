@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  FaCheckCircle,
+  FaExclamationCircle,
+  FaExclamationTriangle,
+  FaInfoCircle,
+  FaRegWindowClose,
+} from "react-icons/fa";
 import "./Toast.css";
 
 export interface ToastProps {
@@ -8,19 +15,33 @@ export interface ToastProps {
 }
 
 function Toast(props: ToastProps) {
+	const generateIcon = (type: "success" | "error" | "warning" | "info") => {
+    switch (type) {
+      case "info":
+        return <FaInfoCircle className="icon" />;
+      case "warning":
+        return <FaExclamationTriangle className="icon" />;
+      case "error":
+        return <FaExclamationCircle className="icon" />;
+      case "success":
+        return <FaCheckCircle className="icon" />;
+      default:
+        return;
+    }
+  };
   return (
 		<div className={`notification toast ${props.type}`}>
-			<button onClick={() => props.onClose()}>
-				x
-			</button>
-
 			<div className="icon-container">
-				<i className="fas fa-check"></i>
+				{generateIcon(props.type)}
 			</div>
 
 			<div className="text-container">
-				<p>{props.message}</p>
+				<h4>{props.message}</h4>
 			</div>
+
+			<button onClick={() => props.onClose()}>
+				x
+			</button>
 		</div>
 	);
 };
