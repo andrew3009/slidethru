@@ -2,7 +2,7 @@ import React from "react";
 import Toast from "../Toast/Toast";
 import "./ToastList.css";
 
-// TODO : Add different positions.
+// TODO: Add different positions.
 
 export interface ToastListProps {
 	toasts: {
