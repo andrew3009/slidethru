@@ -1,0 +1,15 @@
+.success {
+	backgroundColor: #4CAF50;
+}
+
+.warning {
+	backgroundColor: #ff9800;
+}
+
+.error {
+	backgroundColor: #f44336;
+}
+
+.info {
+	backgroundColor: #2196F3;
+}
